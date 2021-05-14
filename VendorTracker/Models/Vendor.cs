@@ -29,6 +29,11 @@ namespace VendorTracker.Models
       return _instances[searchId - 1];
     }
 
+    public void AddOrder(Order order)
+    {
+      
+    }
+
     public static void ClearAll()
     {
       _instances.Clear();
