@@ -8,7 +8,7 @@ namespace VendorTracker
     public static void Main(string[] args)
     {
       var host = new WebHostBuilder()
-        .UseKestral()
+        .UseKestrel()
         .UseContentRoot(Directory.GetCurrentDirectory())
         .UseIISIntegration()
         .UseStartup<Startup>()
