@@ -16,8 +16,23 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new("title");
+      Order newOrder = new("title", "description", 0, "date");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+
+    [TestMethod]
+    public void GetTitle_ReturnsOrderTitle_String()
+    {
+      //Arrange
+      string title = "Colac Order";
+      string description = "Joann orders 9 Colac loaves every other day. This is a reoccuring order.";
+      int price = 30;
+      string date = "05/14/2021";
+      Order newOrder = new(title, description, price, date);
+      //Act
+      string result = newOrder.Title;
+      //Assert
+      Assert.AreEqual(title, result);
     }
   }
 }
