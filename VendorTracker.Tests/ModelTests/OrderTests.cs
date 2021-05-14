@@ -49,5 +49,20 @@ namespace VendorTracker.Tests
       //Assert
       Assert.AreEqual(description, result);
     }
+
+    [TestMethod]
+    public void GetPrice_ReturnsOrderPrice_Int()
+    {
+      //Arrange
+      string title = "Colac Order";
+      string description = "Joann orders 9 Colac loaves every other day. This is a reoccuring order.";
+      int price = 30;
+      string date = "05/14/2021";
+      Order newOrder = new(title, description, price, date);
+      //Act
+      int result = newOrder.Price;
+      //Assert
+      Assert.AreEqual(price, result);
+    }
   }
 }
