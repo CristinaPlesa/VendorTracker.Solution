@@ -95,7 +95,7 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void AddOrder_AssociatesOrderWithVendor_OrderList()
     {
-      //Arrange
+     //Arrange
       string title = "Colac Order";
       Order newOrder = new(title);
       List<Order> newOrderList = new List<Order> { newOrder };
@@ -105,7 +105,7 @@ namespace VendorTracker.Tests
       newVendor.AddOrder(newOrder);
       //Act
       List<Order> result = newVendor.Orders;
-      //Assert
+      //Assert 
       CollectionAssert.AreEqual(newOrderList, result);
     }
   }
