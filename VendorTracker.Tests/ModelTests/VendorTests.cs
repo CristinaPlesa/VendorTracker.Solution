@@ -92,24 +92,24 @@ namespace VendorTracker.Tests
       Assert.AreEqual(newVendor2, result);
     }
 
-    // [TestMethod]
-    // public void AddOrder_AssociatesOrderWithVendor_OrderList()
-    // {
-    //  //Arrange
-    //   string title = "Colac Order";
-    //   string description = "Joann orders 9 Colac loaves every other day. This is a reoccuring order.";
-    //   int price = 30;
-    //   string date = "05/14/2021";
-    //   Order newOrder = new(title, description, price, date);
-    //   List<Order> newOrderList = new List<Order> { newOrder };
-    //   string name = "Joann's Coffee";
-    //   string description = "A Porland-based cart cafe and seller of baked goods!";
-    //   Vendor newVendor = new(name, description);
-    //   newVendor.AddOrder(newOrder);
-    //   //Act
-    //   List<Order> result = newVendor.Orders;
-    //   //Assert 
-    //   CollectionAssert.AreEqual(newOrderList, result);
-    // }
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+     //Arrange
+      string title01 = "Colac Order";
+      string description01 = "Joann orders 9 Colac loaves every other day. This is a reoccuring order.";
+      int price01 = 30;
+      string date01 = "05/14/2021";
+      Order newOrder = new(title01, description01, price01, date01);
+      List<Order> newOrderList = new List<Order> { newOrder };
+      string name = "Joann's Coffee";
+      string description = "A Porland-based cart cafe and seller of baked goods!";
+      Vendor newVendor = new(name, description);
+      newVendor.AddOrder(newOrder);
+      //Act
+      List<Order> result = newVendor.Orders;
+      //Assert 
+      CollectionAssert.AreEqual(newOrderList, result);
+    }
   }
 }
