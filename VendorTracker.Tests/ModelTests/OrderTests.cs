@@ -126,5 +126,25 @@ namespace VendorTracker.Tests
       //Assert
       Assert.AreEqual(1, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      //Arrange
+      string title01 = "Colac Order";
+      string description01 = "Joann orders 9 Colac loaves every other day. This is a reoccuring order.";
+      int price01 = 30;
+      string date01 = "05/14/2021";
+      string title02 = "Galuste cu Prune Order";
+      string description02 = "Joann orders 15 Galuste pastries every other day. This is a reoccuring order.";
+      int price02 = 25;
+      string date02 = "05/14/2021";
+      Order newOrder1 = new(title01, description01, price01, date01);
+      Order newOrder2 = new(title02, description02, price02, date02);
+      //Act
+      Order result = Order.Find(2);
+      //Assert
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }
