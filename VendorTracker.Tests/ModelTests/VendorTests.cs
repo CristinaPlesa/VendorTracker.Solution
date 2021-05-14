@@ -73,7 +73,7 @@ namespace VendorTracker.Tests
       //Act
       List<Vendor> result = Vendor.GetAll();
       //Assert
-      CollectionsAssert.AreEqual(newVendorList, result);
+      CollectionAssert.AreEqual(newVendorList, result);
     }
   }
 }
