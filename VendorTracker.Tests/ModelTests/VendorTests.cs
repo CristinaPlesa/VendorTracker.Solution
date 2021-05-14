@@ -59,11 +59,21 @@ namespace VendorTracker.Tests
       Assert.AreEqual(1, result);
     }
 
-    // [TestMethod]
-    // public void GetAll_ReturnsAllVendorObjects_Vendor()
-    // {
-    //   //Arrange
-    //   string name01 = ""
-    // }
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_Vendor()
+    {
+      //Arrange
+      string name01 = "Joann's Coffee";
+      string description01 = "A Porland-based cart cafe and seller of baked goods!";
+      string name02 = "Bob's Convenience";
+      string description02 = "A convenience store of locally made products and baked goods!";
+      Vendor newVendor1 = new(name01, description01);
+      Vendor newVendor2 = new(name02, description02);
+      List<Vendor> newVendorList = new List<Vendor> {newVendor1, newVendor2};
+      //Act
+      List<Vendor> result = Vendor.GetAll();
+      //Assert
+      CollectionsAssert.AreEqual(newVendorList, result);
+    }
   }
 }
