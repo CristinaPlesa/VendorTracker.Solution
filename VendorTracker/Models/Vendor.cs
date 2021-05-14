@@ -10,9 +10,10 @@ namespace VendorTracker.Models
     public int Id { get ; }
     public List<Vendor> Vendors { get ; set ; }
 
-    public Vendor(string vendorName)
+    public Vendor(string vendorName, string description)
     {
       Name = vendorName;
+      Description = description;
       _instances.Add(this);
       Id = _instances.Count;
       Vendors = new List<Vendor>{};
