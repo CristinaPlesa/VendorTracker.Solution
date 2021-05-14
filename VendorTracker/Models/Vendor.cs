@@ -8,7 +8,7 @@ namespace VendorTracker.Models
     public string Name { get ; set ; }
     public string Description { get ; set ; }
     public int Id { get ; }
-    public List<Vendor> Vendors { get ; set ; }
+    public List<Order> Orders { get ; set ; }
 
     public Vendor(string vendorName, string description)
     {
@@ -16,7 +16,7 @@ namespace VendorTracker.Models
       Description = description;
       _instances.Add(this);
       Id = _instances.Count;
-      Vendors = new List<Vendor>{};
+      Vendors = new List<Order>{};
     }
 
     public static void ClearAll()
