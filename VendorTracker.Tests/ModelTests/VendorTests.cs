@@ -75,5 +75,21 @@ namespace VendorTracker.Tests
       //Assert
       CollectionAssert.AreEqual(newVendorList, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      //Arrange
+      string name01 = "Joann's Coffee";
+      string description01 = "A Porland-based cart cafe and seller of baked goods!";
+      string name02 = "Bob's Convenience";
+      string description02 = "A convenience store of locally made products and baked goods!";
+      Vendor newVendor1 = new(name01, description01);
+      Vendor newVendor2 = new(name02, description02);
+      //Act
+      Vendor result = Vendor.Find(2);
+      //Assert
+      Assert.AreEqual(newVendor2, result);
+    }
   }
 }
