@@ -26,7 +26,7 @@ namespace VendorTracker.Models
 
     public static Vendor Find(int searchId)
     {
-      return;
+      return _instances[searchId - 1];
     }
 
     public static void ClearAll()
