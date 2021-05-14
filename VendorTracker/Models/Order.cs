@@ -4,8 +4,12 @@ namespace VendorTracker.Models
 {
   public class Order
   {
-    // will include:
-    // Title, Description, Price, Date, Id
+    public string Title { get ; set ; }
+    public string Description { get ; set ; }
+    public int Price { get ; }
+    public int Date { get ; }
+    public int Id { get ; }
+    private static List<Order> _instances = new List<Order> {};
 
     public Order(string title)
     {
