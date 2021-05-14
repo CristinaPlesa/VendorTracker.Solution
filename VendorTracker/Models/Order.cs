@@ -9,7 +9,12 @@ namespace VendorTracker.Models
 
     public Order(string title)
     {
-      
+
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }
