@@ -38,7 +38,7 @@ namespace VendorTracker.Tests
     {
       //Arrange
       string name = "Joann's Coffee";
-      string description = "A Porland-based cart cafe and seller of baked goods!";
+      string description = "A Portland-based cart cafe and seller of baked goods!";
       Vendor newVendor = new(name, description);
       //Act
       string result = newVendor.Description;
@@ -64,7 +64,7 @@ namespace VendorTracker.Tests
     {
       //Arrange
       string name01 = "Joann's Coffee";
-      string description01 = "A Porland-based cart cafe and seller of baked goods!";
+      string description01 = "A Portland-based cart cafe and seller of baked goods!";
       string name02 = "Bob's Convenience";
       string description02 = "A convenience store of locally made products and baked goods!";
       Vendor newVendor1 = new(name01, description01);
@@ -81,7 +81,7 @@ namespace VendorTracker.Tests
     {
       //Arrange
       string name01 = "Joann's Coffee";
-      string description01 = "A Porland-based cart cafe and seller of baked goods!";
+      string description01 = "A Portland-based cart cafe and seller of baked goods!";
       string name02 = "Bob's Convenience";
       string description02 = "A convenience store of locally made products and baked goods!";
       Vendor newVendor1 = new(name01, description01);
@@ -103,7 +103,7 @@ namespace VendorTracker.Tests
       Order newOrder = new(title01, description01, price01, date01);
       List<Order> newOrderList = new List<Order> { newOrder };
       string name = "Joann's Coffee";
-      string description = "A Porland-based cart cafe and seller of baked goods!";
+      string description = "A Portland-based cart cafe and seller of baked goods!";
       Vendor newVendor = new(name, description);
       newVendor.AddOrder(newOrder);
       //Act
