@@ -2,7 +2,7 @@
 
 #### By Cristina Plesa
 
-#### A C# application that 
+#### A C# application that allows user to input Vendors and their Orders in the browser. Each Order and Vendor is then saved and user can navigate pages for Vendor and Order details.
 
 ## Technologies Used
 
